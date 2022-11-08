@@ -1,0 +1,17 @@
+stages:
+  - build
+  - dockerize
+  - deploy
+
+variables:
+  SERVICE_NAME: landing
+  SERVICE_BASE_PATH: services/landing
+
+frontend-build:
+  extends: .build
+
+frontend-docker:
+  extends: .dockerize
+
+frontend-deploy:
+  extends: .aws
