@@ -85,6 +85,7 @@ const MainWrapper = styled.section`
 	max-width: 100%;
 	flex-wrap: wrap;
 	/* scroll-snap-align: start; */
+	margin-block-end: 10rem;
 
 	@media screen and (max-width: 38rem) {
 		margin-top: 2rem;

@@ -115,7 +115,7 @@ const Nav = styled.a`
 
 const TopShadeWrapper = styled.div`
 	position: absolute;
-	right: 0%;
+	right: -4%;
 	top: 0%;
 `;
 
@@ -129,6 +129,7 @@ const DesktopDisplay = styled.section`
 	padding-inline: 2rem;
 	transform: ${({ delayFiveSec }) => (delayFiveSec === 'block' ? 'translateY(0%)' : 'translateY(-100%)')};
 	transition-duration: 700ms;
+	margin: 0 auto;
 	@media only screen and (max-width: 54.31rem) {
 		display: none;
 	}
@@ -141,6 +142,7 @@ const TabletDisplay = styled.section`
 	height: 6rem;
 	padding-inline: 2rem;
 	align-items: center;
+	margin: 0 auto;
 
 	@media only screen and (min-width: 54.3rem) {
 		display: none;

@@ -1,10 +1,10 @@
 export const secondaryHeader = [
-  {
-    name: 'Son kullanıcı',
-    tabId: 0,
-  },
-  {
-    name: 'Uzman',
-    tabId: 1,
-  },
+	{
+		name: 'User',
+		tabId: 0,
+	},
+	{
+		name: 'Expert',
+		tabId: 1,
+	},
 ];

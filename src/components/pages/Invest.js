@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { tradingNavigation } from 'configs/tradingNavigation';
 import ChartImage from 'assests/images/anima-img.png';
+import ToggleUser from './ToggleUserButon';
 
 const Invest = () => {
 	const [activeTab, setActiveTab] = useState();
@@ -9,7 +10,8 @@ const Invest = () => {
 	return (
 		<InvestWrapper>
 			<Head>
-				<Heading>Algorithmic Trading Made Simple</Heading>
+				<ToggleUser />
+				<Heading>Invest in everything.</Heading>
 				<Subheading>Gain access and exposure to a growing list of asset classes, not just stocks.</Subheading>
 				<Navigations>
 					{tradingNavigation.map(({ name, link }, idx) => (
@@ -44,8 +46,13 @@ export default Invest;
 
 const InvestWrapper = styled.section`
 	height: 100vh;
-	margin-top: 5rem;
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`;
+
+const Head = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -55,37 +62,38 @@ const Heading = styled.h1`
 	font-family: Comfortaa;
 	font-size: 2.2rem;
 	font-weight: 700;
-	line-height: 4rem;
+	line-height: 3rem;
 	color: ${({ theme }) => theme.primary.default};
+	text-align: center;
+	margin-block-start: 2rem;
 `;
 
 const Subheading = styled.p`
 	font-family: Comfortaa;
-	font-size: 1.1rem;
+	font-size: 1.05rem;
 	font-weight: 500;
 	line-height: 1.2rem;
 	max-width: 32rem;
 	text-align: center;
 	color: ${({ theme }) => theme.gray[100]};
+	letter-spacing: 0em;
 `;
 
 const Navigations = styled.nav`
 	display: flex;
 	justify-content: center;
-	gap: 3rem;
+	gap: 4rem;
 	margin-block: 1rem;
 `;
 
 const NavItem = styled.a`
 	text-decoration: none;
 	color: ${({ theme, activeTab, name }) => (activeTab === name ? `${theme.primary.default}` : `${theme.gray[200]}`)};
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 	font-weight: 600;
 	line-height: 31px;
 	cursor: pointer;
 `;
-
-const Head = styled.div``;
 
 const Body = styled.div`
 	display: flex;
