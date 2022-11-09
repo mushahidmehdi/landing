@@ -13,7 +13,7 @@ const ContainerWrapper = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
-	padding-inline: 2rem;
+	padding-inline: 3rem;
 `;
 
 export default Container;

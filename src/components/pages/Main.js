@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Button } from 'styles/shared';
+import { Container } from 'styles/shared';
 import mainPageImg from 'assests/images/mainPage.svg';
 import bgGradient from 'assests/images/main-bg-gradient.svg';
 import AppStore from 'assests/images/app-store.svg';
@@ -23,56 +24,59 @@ const Main = () => {
 	}, []);
 
 	return (
-		<MainWrapper>
-			<RightBody delayFiveMiliSec={delayFiveMiliSec}>
-				<BgRadient delayFiveMiliSec={delayFiveMiliSec}>
-					<img src={bgGradient} alt="Gradient" />
-				</BgRadient>
-				<h1>
-					<span> Automate, Manage </span>
-				</h1>
-				<h1>
-					<span> and Monitor Your</span>
-				</h1>
+		<Container>
+			<MainWrapper>
+				<RightBody delayFiveMiliSec={delayFiveMiliSec}>
+					<BgRadient delayFiveMiliSec={delayFiveMiliSec}>
+						<img src={bgGradient} alt="Gradient" />
+					</BgRadient>
+					<h1>
+						<span> Automate, Manage </span>
+					</h1>
+					<h1>
+						<span> and Monitor Your</span>
+					</h1>
 
-				<h1>
-					<span>Portfolio</span>
-				</h1>
-				<p>
-					<span>
-						Traderlands allow to turn their trading strategies into automated bots, backtesting and sharing
-						their strategies on the marketplace.
-					</span>
-				</p>
-				<WatchTurorialWrapper delayFiveMiliSec={delayFiveMiliSec}>
-					<h3>
-						<span>Get Started</span>
-					</h3>
-					<h6>
-						<span>Watch Tutorials</span>
-					</h6>
-				</WatchTurorialWrapper>
-				<ActionWrapperDesktop delayTwoSec={delayTwoSec}>
-					<div>
-						<Button
-							text="Get Started"
-							sx={{
-								paddingBlock: '1rem',
-							}}
-						/>
-						<img src={AppStore} alt="App Store" />
-						<img src={googlePlay} alt="Google Play" />
-					</div>
-				</ActionWrapperDesktop>
-			</RightBody>
-			<LeftBody delayFiveMiliSec={delayFiveMiliSec}>
-				<img src={mainPageImg} alt="MainPageImg" />
-				<ActionWrapperMob>
-					<img src={AppStore} alt="App Store" width={150} />
-					<img src={googlePlay} alt="Google Play" width={150} />
-				</ActionWrapperMob>
-			</LeftBody>
-		</MainWrapper>
+					<h1>
+						<span>Portfolio</span>
+					</h1>
+					<p>
+						<span>
+							Traderlands allow to turn their trading strategies into automated bots, backtesting and
+							sharing their strategies on the marketplace.
+						</span>
+					</p>
+					<WatchTurorialWrapper delayFiveMiliSec={delayFiveMiliSec}>
+						<h3>
+							<span>Get Started</span>
+						</h3>
+						<h6>
+							<span>Watch Tutorials</span>
+						</h6>
+					</WatchTurorialWrapper>
+					<ActionWrapperDesktop delayTwoSec={delayTwoSec}>
+						<div>
+							<Button
+								text="Get Started"
+								sx={{
+									paddingBlock: '1rem',
+									paddingInline: '2.5rem',
+								}}
+							/>
+							<img src={AppStore} alt="App Store" />
+							<img src={googlePlay} alt="Google Play" />
+						</div>
+					</ActionWrapperDesktop>
+				</RightBody>
+				<LeftBody delayFiveMiliSec={delayFiveMiliSec}>
+					<img src={mainPageImg} alt="MainPageImg" />
+					<ActionWrapperMob>
+						<img src={AppStore} alt="App Store" width={150} />
+						<img src={googlePlay} alt="Google Play" width={150} />
+					</ActionWrapperMob>
+				</LeftBody>
+			</MainWrapper>
+		</Container>
 	);
 };
 
@@ -84,8 +88,6 @@ const MainWrapper = styled.section`
 	justify-content: space-between;
 	max-width: 100%;
 	flex-wrap: wrap;
-	/* scroll-snap-align: start; */
-	margin-block-end: 10rem;
 
 	@media screen and (max-width: 38rem) {
 		margin-top: 2rem;
@@ -99,7 +101,7 @@ const RightBody = styled.div`
 
 	h1 {
 		font-family: Comfortaa;
-		font-size: 4rem;
+		font-size: 3.5rem;
 		font-weight: 700;
 		line-height: 71px;
 		overflow: hidden;
@@ -174,7 +176,7 @@ const ActionWrapperDesktop = styled.div`
 		display: flex;
 		align-items: center;
 		gap: 1rem;
-		margin-top: 1rem;
+		margin-top: 6.5rem;
 		transform: ${({ delayTwoSec }) => (delayTwoSec === 'block' ? 'translateY(0%)' : 'translateY(-300%)')};
 		transition-duration: 1000ms;
 		> img {
@@ -220,6 +222,7 @@ const LeftBody = styled.div`
 const BgRadient = styled.div`
 	position: absolute;
 	left: 0%;
+	top: 0%;
 	display: ${({ delayFiveMiliSec }) => delayFiveMiliSec};
 	> img {
 		width: 100%;
@@ -232,6 +235,7 @@ const WatchTurorialWrapper = styled.div`
 	display: flex;
 	gap: 1rem;
 	flex-wrap: wrap-reverse;
+
 	h3 {
 		font-family: Comfortaa;
 		font-size: 18px;
@@ -258,9 +262,9 @@ const WatchTurorialWrapper = styled.div`
 		@media only screen and (max-width: 339px) {
 			margin-top: 0;
 		}
-		@media only screen and (min-width: 54.3rem) {
-			display: none;
-		}
+	}
+	@media only screen and (min-width: 54.3rem) {
+		display: none;
 	}
 `;
 

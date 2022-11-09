@@ -27,13 +27,20 @@ const Header = () => {
 
 	return (
 		<HeaderWrapper>
-			<DesktopDisplay delayFiveSec={delayFiveSec}>
+			<DesktopDisplay>
 				<Logo>
 					<img src={logo} alt="Logo Trader land" />
 				</Logo>
 				<Navigations>
 					{navigations.map(({ name, link }, idx) => (
-						<Nav key={idx} href="#" name={name} activeTab={activeTab} onClick={() => setActiveTab(name)}>
+						<Nav
+							key={idx}
+							href="#"
+							name={name}
+							activeTab={activeTab}
+							onClick={() => setActiveTab(name)}
+							delayFiveSec={delayFiveSec}
+						>
 							{name}
 						</Nav>
 					))}
@@ -41,7 +48,13 @@ const Header = () => {
 				<TopShadeWrapper>
 					<img src={shade} alt="shade" />
 				</TopShadeWrapper>
-				<Button text={'Get Start'} />
+				<Button
+					text={'Get Start'}
+					sx={{
+						paddingInline: '1.4rem',
+						cursor: 'pointer',
+					}}
+				/>
 			</DesktopDisplay>
 
 			<TabletDisplay>
@@ -90,6 +103,34 @@ const Header = () => {
 
 export default Header;
 
+const DesktopDisplay = styled.section`
+	display: flex;
+	width: 114rem;
+	max-width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	height: 5rem;
+	padding-inline: 3rem;
+	margin: 0 auto;
+	@media only screen and (max-width: 54.31rem) {
+		display: none;
+	}
+`;
+
+const TabletDisplay = styled.section`
+	display: flex;
+	justify-content: space-between;
+	max-width: 100%;
+	height: 6rem;
+	padding-inline: 3rem;
+	align-items: center;
+	margin: 0 auto;
+
+	@media only screen and (min-width: 54.3rem) {
+		display: none;
+	}
+`;
+
 const HeaderWrapper = styled.header`
 	margin: 0 auto;
 `;
@@ -111,42 +152,14 @@ const Nav = styled.a`
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 18px;
+	transform: ${({ delayFiveSec }) => (delayFiveSec === 'block' ? 'translateY(0%)' : 'translateY(-400%)')};
+	transition-duration: 700ms;
 `;
 
 const TopShadeWrapper = styled.div`
 	position: absolute;
-	right: -4%;
+	right: 0%;
 	top: 0%;
-`;
-
-const DesktopDisplay = styled.section`
-	display: flex;
-	width: 114rem;
-	max-width: 100%;
-	align-items: center;
-	justify-content: space-between;
-	height: 5rem;
-	padding-inline: 2rem;
-	transform: ${({ delayFiveSec }) => (delayFiveSec === 'block' ? 'translateY(0%)' : 'translateY(-100%)')};
-	transition-duration: 700ms;
-	margin: 0 auto;
-	@media only screen and (max-width: 54.31rem) {
-		display: none;
-	}
-`;
-
-const TabletDisplay = styled.section`
-	display: flex;
-	justify-content: space-between;
-	max-width: 100%;
-	height: 6rem;
-	padding-inline: 2rem;
-	align-items: center;
-	margin: 0 auto;
-
-	@media only screen and (min-width: 54.3rem) {
-		display: none;
-	}
 `;
 
 const Hamburger = styled.div`
