@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Container } from 'styles/shared';
 import Header from 'components/Header';
-import { Main, Invest } from 'components/pages';
+import { Main, Invest, HowItWork } from 'components/pages';
 
 export default function App() {
 	return (
@@ -20,6 +20,7 @@ export default function App() {
 			<Container>
 				<Main />
 				<Invest />
+				<HowItWork />
 			</Container>
 		</>
 	);

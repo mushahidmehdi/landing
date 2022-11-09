@@ -97,7 +97,7 @@ const NavItem = styled.a`
 
 const Body = styled.div`
 	display: flex;
-	/* margin-block-start: 5rem; */
+	gap: 4rem;
 `;
 
 const LeftBody = styled.div``;
