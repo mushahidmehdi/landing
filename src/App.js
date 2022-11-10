@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Container } from 'styles/shared';
 import Header from 'components/Header';
@@ -6,6 +6,8 @@ import { Main, Invest, HowItWork, StrategyTools, LogosSlider, MarketPlace } from
 import { Footer, PreFooter } from 'components/Footer';
 
 export default function App() {
+	const [userType, setUserType] = useState('n');
+
 	return (
 		<>
 			<Helmet>
@@ -21,9 +23,9 @@ export default function App() {
 			<Main />
 			<LogosSlider />
 			<Container>
-				<Invest />
+				<Invest setUserType={setUserType} />
 				<HowItWork />
-				<StrategyTools />
+				<StrategyTools userType={userType} />
 				<MarketPlace />
 			</Container>
 			<PreFooter />

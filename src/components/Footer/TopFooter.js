@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import footerAnima from 'assests/images/footer-anima.svg';
-import footerLetsGo from 'assests/images/footer-lets-go.svg';
+// import footerLetsGo from 'assests/images/footer-lets-go.svg';
 import footerRight from 'assests/images/footer-right.svg';
 
 const TopFooter = () => {

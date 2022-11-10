@@ -2,12 +2,18 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { secondaryHeader } from 'configs/secondaryHeader';
 
-const SecondaryHeader = () => {
+const SecondaryHeader = ({ setUserType }) => {
 	const [activeButton, setActiveButton] = useState(0);
+
+	const handleActiveUser = (param) => {
+		setUserType(param);
+		setActiveButton(param);
+	};
+
 	return (
 		<SecondaryHeaderWrapper>
 			{secondaryHeader.map(({ name, tabId }) => (
-				<Toggle key={tabId} tabId={tabId} activeButton={activeButton} onClick={() => setActiveButton(tabId)}>
+				<Toggle key={tabId} tabId={tabId} activeButton={activeButton} onClick={() => handleActiveUser(tabId)}>
 					<p>{name}</p>
 				</Toggle>
 			))}

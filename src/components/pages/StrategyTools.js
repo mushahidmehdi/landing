@@ -8,11 +8,10 @@ import mobApp from 'assests/images/mob-app.svg';
 import AppStore from 'assests/images/app-store.svg';
 import googlePlay from 'assests/images/google-play.svg';
 
-export const StrategyTools = () => {
-	const [userType, setUserType] = useState('n');
+export const StrategyTools = ({ userType }) => {
 	return (
 		<StrategyToolsWrapper>
-			{userType === 'expert' ? (
+			{userType === 1 ? (
 				<>
 					<StrategyToolsHeadingWrapper>
 						<Heading> Strategy Creator Tool</Heading>

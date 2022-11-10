@@ -5,13 +5,13 @@ import ChartImage from 'assests/images/anima-img.png';
 import ToggleUser from './ToggleUserButon';
 import { Heading, SubHeading } from 'styles/shared';
 
-const Invest = () => {
+const Invest = ({ setUserType }) => {
 	const [activeTab, setActiveTab] = useState();
 
 	return (
 		<InvestWrapper>
 			<Head>
-				<ToggleUser />
+				<ToggleUser setUserType={setUserType} />
 				<Heading>Invest in everything.</Heading>
 				<SubHeading>Gain access and exposure to a growing list of asset classes, not just stocks.</SubHeading>
 				<Navigations>

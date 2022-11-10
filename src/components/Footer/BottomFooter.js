@@ -57,7 +57,7 @@ const LogoWrapper = styled.div``;
 const FotterLinks = styled.div`
 	display: flex;
 	gap: 2rem;
-
+	margin-top: 1rem;
 	> div > img {
 		margin-top: 0.5rem;
 		padding-top: 0.3rem;
