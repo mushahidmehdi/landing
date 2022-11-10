@@ -92,6 +92,9 @@ const StrategyToolsHeadingWrapper = styled.div`
 	margin-block: 1rem;
 `;
 const StrategyToolsBodyLeft = styled.div`
+	margin-top: 8rem;
+	margin-inline-start: 4rem;
+
 	> p {
 		margin-block-start: 2rem;
 	}
