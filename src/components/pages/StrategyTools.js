@@ -9,7 +9,7 @@ import AppStore from 'assests/images/app-store.svg';
 import googlePlay from 'assests/images/google-play.svg';
 
 export const StrategyTools = () => {
-	const [userType, setUserType] = useState('expert');
+	const [userType, setUserType] = useState('n');
 	return (
 		<StrategyToolsWrapper>
 			{userType === 'expert' ? (
@@ -19,7 +19,7 @@ export const StrategyTools = () => {
 						<SubHeading>You are ready?</SubHeading>
 					</StrategyToolsHeadingWrapper>
 					<StrategyToolsBody>
-						<StrategyToolsBodyLeft>
+						<StrategyToolsBodyLeft mt="8rem">
 							<UriTitle>
 								<img src={uriIcon} alt="startegyToolImg" />
 								<p>No code needed.</p>
@@ -70,8 +70,8 @@ export const StrategyTools = () => {
 								real-time market data.
 							</p>
 							<ActionWrapperMob>
-								<img src={AppStore} alt="App Store" width={150} />
-								<img src={googlePlay} alt="Google Play" width={150} />
+								<img src={AppStore} alt="App Store" width={200} />
+								<img src={googlePlay} alt="Google Play" width={200} />
 							</ActionWrapperMob>
 						</StrategyToolsBodyRight>
 					</StrategyToolsBody>
@@ -92,8 +92,8 @@ const StrategyToolsHeadingWrapper = styled.div`
 	margin-block: 1rem;
 `;
 const StrategyToolsBodyLeft = styled.div`
-	margin-top: 8rem;
-	margin-inline-start: 4rem;
+	margin-top: ${({ mt }) => mt ?? '-10rem'};
+	margin-inline-start: ${({ mt }) => (mt ? '4rem' : 0)};
 
 	> p {
 		margin-block-start: 2rem;
@@ -102,9 +102,10 @@ const StrategyToolsBodyLeft = styled.div`
 const StrategyToolsBodyRight = styled.div``;
 
 const TopParagGraph = styled.div`
-	margin-top: 6rem;
+	margin-top: 10rem;
 	display: flex;
-	align-items: flex-start;
+	justify-content: center;
+	align-items: center;
 
 	> img {
 		display: flex;

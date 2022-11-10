@@ -15,4 +15,8 @@ export const navigations = [
 		name: 'About Us',
 		link: '/about',
 	},
+	{
+		name: 'FAQ',
+		link: '/faq',
+	},
 ];

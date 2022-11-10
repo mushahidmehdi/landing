@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Container } from 'styles/shared';
 import Header from 'components/Header';
-import { Main, Invest, HowItWork, StrategyTools, LogosSlider } from 'components/pages';
+import { Main, Invest, HowItWork, StrategyTools, LogosSlider, MarketPlace } from 'components/pages';
+import { Footer, PreFooter } from 'components/Footer';
 
 export default function App() {
 	return (
@@ -23,7 +24,10 @@ export default function App() {
 				<Invest />
 				<HowItWork />
 				<StrategyTools />
+				<MarketPlace />
 			</Container>
+			<PreFooter />
+			<Footer />
 		</>
 	);
 }

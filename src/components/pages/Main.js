@@ -99,7 +99,7 @@ const RightBody = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-
+	margin-top: 5rem;
 	h1 {
 		font-family: Comfortaa;
 		font-size: 3.5rem;
@@ -151,7 +151,7 @@ const RightBody = styled.div`
 		line-height: 20px;
 		font-size: 1.25rem;
 		color: ${({ theme }) => theme.primary.default};
-		margin-top: 3rem;
+		margin-top: 4rem;
 		overflow: hidden;
 
 		@media only screen and (max-width: 54.3rem) {
@@ -169,6 +169,10 @@ const RightBody = styled.div`
 			transition-duration: 1000ms;
 		}
 	}
+
+	@media screen and (max-width: 38rem) {
+		margin-top: 0;
+	}
 `;
 
 const ActionWrapperDesktop = styled.div`
@@ -185,8 +189,9 @@ const ActionWrapperDesktop = styled.div`
 		}
 	}
 	@media only screen and (max-width: 54.3rem) {
-		display: none;
+		/* display: none; */
 	}
+	display: none;
 `;
 
 const ActionWrapperMob = styled(ActionWrapperDesktop)`
@@ -266,9 +271,9 @@ const WatchTurorialWrapper = styled.div`
 			margin-top: 0;
 		}
 	}
-	@media only screen and (min-width: 54.3rem) {
+	/* @media only screen and (min-width: 54.3rem) {
 		display: none;
-	}
+	} */
 `;
 
 export default Main;
