@@ -6,6 +6,7 @@ import mainPageImg from 'assests/images/mainPage.svg';
 import bgGradient from 'assests/images/main-bg-gradient.svg';
 import AppStore from 'assests/images/app-store.svg';
 import googlePlay from 'assests/images/google-play.svg';
+import bgvedio from 'assests/vedios/main-page-vedio.mp4';
 
 const Main = () => {
 	const [delayFiveMiliSec, setDelayFiveMiliSec] = useState('none');
@@ -69,7 +70,7 @@ const Main = () => {
 					</ActionWrapperDesktop>
 				</RightBody>
 				<LeftBody delayFiveMiliSec={delayFiveMiliSec}>
-					<img src={mainPageImg} alt="MainPageImg" />
+					<video src={bgvedio} autoPlay loop muted />
 					<ActionWrapperMob>
 						<img src={AppStore} alt="App Store" width={150} />
 						<img src={googlePlay} alt="Google Play" width={150} />
@@ -200,11 +201,13 @@ const ActionWrapperMob = styled(ActionWrapperDesktop)`
 
 const LeftBody = styled.div`
 	display: flex;
-	flex-direction: column;
-	transform: ${({ delayFiveMiliSec }) => (delayFiveMiliSec === 'block' ? 'translateX(0%)' : 'translateX(300%)')};
-	transition-duration: 1000ms;
-
-	> img {
+	max-width: 40rem;
+	overflow: hidden;
+	/* flex-direction: column; */
+	/* transform: ${({ delayFiveMiliSec }) => (delayFiveMiliSec === 'block' ? 'translateX(0%)' : 'translateX(300%)')};
+	transition-duration: 1000ms; */
+	/* border: 1px solid red; */
+	> video {
 		display: block;
 		width: 100%;
 		height: auto;

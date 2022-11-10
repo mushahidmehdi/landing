@@ -20,7 +20,6 @@ const HowWork = () => {
 export default HowWork;
 
 const HowWorkWrapper = styled.section`
-	height: 100vh;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
