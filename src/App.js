@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Container } from 'styles/shared';
 import Header from 'components/Header';
 import { Main, Invest, HowItWork, StrategyTools, LogosSlider, MarketPlace } from 'components/pages';
-import { Footer, PreFooter } from 'components/Footer';
+import { Footer } from 'components/Footer';
 
 export default function App() {
 	const [userType, setUserType] = useState('n');
@@ -28,7 +28,6 @@ export default function App() {
 				<StrategyTools userType={userType} />
 				<MarketPlace />
 			</Container>
-			<PreFooter />
 			<Footer />
 		</>
 	);

@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import exchnageBar from 'assests/images/exchange-bar.svg';
 import { sliderConfig } from 'configs/slider';
 
 const Slider = () => {
+	const [delayTwoSec, setDelayTwoSec] = useState('none');
+
+	useEffect(() => {
+		setTimeout(function () {
+			setDelayTwoSec('block');
+		}, 1000);
+	}, []);
 	return (
-		<SliderWrapper>
+		<SliderWrapper delayTwoSec={delayTwoSec}>
 			<ExchnageBarBg>
 				<img src={exchnageBar} alt="exchange bar bg" />
 				<HighwaySlider>
@@ -29,6 +36,9 @@ const SliderWrapper = styled.div`
 	margin-block-end: 5rem;
 	display: flex;
 	align-items: flex-end;
+
+	transform: ${({ delayTwoSec }) => (delayTwoSec === 'block' ? 'translateX(0%)' : 'translateX(100%)')};
+	transition-duration: 1000ms;
 `;
 
 const ExchnageBarBg = styled.div`
