@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Button, Heading, SubHeading } from 'styles/shared';
-import startegyToolImg from 'assests/images/startegy-side-tool.svg';
 import uriIcon from 'assests/icons/uri-icon.svg';
 import titleIcon from 'assests/icons/mob-app-title-icon.svg';
 import mobApp from 'assests/images/mob-app.svg';
 import AppStore from 'assests/images/app-store.svg';
 import googlePlay from 'assests/images/google-play.svg';
+import strategy from 'assests/images/strategy-mp.svg';
 
 export const StrategyTools = ({ userType }) => {
 	return (
@@ -18,6 +18,9 @@ export const StrategyTools = ({ userType }) => {
 						<SubHeading>You are ready?</SubHeading>
 					</StrategyToolsHeadingWrapper>
 					<StrategyToolsBody>
+						<StrategyToolsBodyRight>
+							<img src={strategy} alt="startegyToolImg" />
+						</StrategyToolsBodyRight>
 						<StrategyToolsBodyLeft mt="8rem">
 							<UriTitle>
 								<img src={uriIcon} alt="startegyToolImg" />
@@ -38,9 +41,6 @@ export const StrategyTools = ({ userType }) => {
 								}}
 							/>
 						</StrategyToolsBodyLeft>
-						<StrategyToolsBodyRight>
-							<img src={startegyToolImg} alt="startegyToolImg" />
-						</StrategyToolsBodyRight>
 					</StrategyToolsBody>
 				</>
 			) : (
@@ -92,7 +92,6 @@ const StrategyToolsHeadingWrapper = styled.div`
 `;
 const StrategyToolsBodyLeft = styled.div`
 	margin-top: ${({ mt }) => mt ?? '-10rem'};
-	margin-inline-start: ${({ mt }) => (mt ? '4rem' : 0)};
 
 	> p {
 		margin-block-start: 2rem;

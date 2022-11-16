@@ -26,9 +26,9 @@ export default function App() {
 				<Invest setUserType={setUserType} />
 				<HowItWork />
 				<StrategyTools userType={userType} />
-				<MarketPlace />
+				<MarketPlace userType={userType} />
 			</Container>
-			<Footer />
+			<Footer userType={userType} />
 		</>
 	);
 }

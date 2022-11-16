@@ -4,11 +4,11 @@ import FooterMainImage from './FooterMainImage';
 import FooterUpperBanner from './FooterUpperBanner';
 import MainFooter from './MainFooter';
 
-const Footer = () => {
+const Footer = ({ userType }) => {
 	return (
 		<>
 			<FooterUpperBanner />
-			<FooterMainImage />
+			<FooterMainImage userType={userType} />
 			<FooterBottomBanner />
 			<MainFooter />
 		</>
