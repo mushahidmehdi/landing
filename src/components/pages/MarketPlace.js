@@ -63,7 +63,6 @@ const MarketPlace = ({ userType }) => {
 export default MarketPlace;
 
 const MarketPlaceWrapper = styled.div`
-	margin-top: -6rem;
 	margin-inline: -3rem;
 `;
 
