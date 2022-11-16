@@ -6,7 +6,7 @@ import { Main, Invest, HowItWork, StrategyTools, LogosSlider, MarketPlace } from
 import { Footer } from 'components/Footer';
 
 export default function App() {
-	const [userType, setUserType] = useState('n');
+	const [userType, setUserType] = useState(0);
 
 	return (
 		<>
@@ -23,7 +23,7 @@ export default function App() {
 			<Main />
 			<LogosSlider />
 			<Container>
-				<Invest setUserType={setUserType} />
+				<Invest setUserType={setUserType} userType={userType} />
 				<HowItWork />
 				<StrategyTools userType={userType} />
 				<MarketPlace userType={userType} />

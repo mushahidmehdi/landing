@@ -60,6 +60,9 @@ const BottomFooterWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	padding-top: 5rem;
+	@media only screen and (max-width: 54.3rem) {
+		display: none;
+	}
 `;
 const LogoWrapper = styled.div``;
 

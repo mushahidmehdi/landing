@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import arrowSvg from 'assests/images/arrow.svg';
-import { Heading, SubHeading } from 'styles/shared';
+import { Heading } from 'styles/shared';
 
 const HowWork = () => {
 	return (
 		<HowWorkWrapper>
 			<Heading>How does it work?</Heading>
-			<SubHeading>
+			{/* <SubHeading>
 				Traderlands is the platform where you can find hundreds of tools to manage your portfolio efficiently.
-			</SubHeading>
+			</SubHeading> */}
 			<ArrowImageWrapper>
 				<img src={arrowSvg} alt="How it Work" />
 			</ArrowImageWrapper>
@@ -24,6 +24,9 @@ const HowWorkWrapper = styled.section`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	@media only screen and (max-width: 54.3rem) {
+		display: none;
+	}
 `;
 
 const ArrowImageWrapper = styled.div`

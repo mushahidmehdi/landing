@@ -55,4 +55,8 @@ const FooterMainImageWrapper = styled.div`
 		line-height: 27px;
 		max-width: 32rem;
 	}
+
+	@media only screen and (max-width: 54.3rem) {
+		display: none;
+	}
 `;

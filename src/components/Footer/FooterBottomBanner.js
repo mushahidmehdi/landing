@@ -30,6 +30,9 @@ const FooterBottomBannerWrapper = styled.div`
 	background-color: ${({ theme }) => theme.primary.default};
 	height: 11rem;
 	display: flex;
+	@media only screen and (max-width: 54.3rem) {
+		display: none;
+	}
 `;
 
 const RightFooterImage = styled.div`

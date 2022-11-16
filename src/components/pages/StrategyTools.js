@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button, Heading, SubHeading } from 'styles/shared';
+import { Button, Heading } from 'styles/shared';
 import uriIcon from 'assests/icons/uri-icon.svg';
 import titleIcon from 'assests/icons/mob-app-title-icon.svg';
 import mobApp from 'assests/images/mob-app.svg';
@@ -15,7 +15,6 @@ export const StrategyTools = ({ userType }) => {
 				<>
 					<StrategyToolsHeadingWrapper>
 						<Heading> Strategy Creator Tool</Heading>
-						<SubHeading>You are ready?</SubHeading>
 					</StrategyToolsHeadingWrapper>
 					<StrategyToolsBody>
 						<StrategyToolsBodyRight>
@@ -45,17 +44,15 @@ export const StrategyTools = ({ userType }) => {
 				</>
 			) : (
 				<>
-					<StrategyToolsHeadingWrapper>
+					{/* <StrategyToolsHeadingWrapper>
 						<Heading>Mobile App</Heading>
-						<SubHeading>
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-						</SubHeading>
-					</StrategyToolsHeadingWrapper>
+					</StrategyToolsHeadingWrapper> */}
 					<StrategyToolsBody>
 						<StrategyToolsBodyLeft>
 							<img src={mobApp} alt="Mobile App" />
 						</StrategyToolsBodyLeft>
 						<StrategyToolsBodyRight>
+							<h3>Mobile App</h3>
 							<TopParagGraph>
 								<img src={titleIcon} alt="MobileIcon" />
 								<p>
@@ -69,8 +66,8 @@ export const StrategyTools = ({ userType }) => {
 								real-time market data.
 							</p>
 							<ActionWrapperMob>
-								<img src={AppStore} alt="App Store" width={200} />
-								<img src={googlePlay} alt="Google Play" width={200} />
+								<img src={AppStore} alt="App Store" width={160} />
+								<img src={googlePlay} alt="Google Play" width={160} />
 							</ActionWrapperMob>
 						</StrategyToolsBodyRight>
 					</StrategyToolsBody>
@@ -80,7 +77,11 @@ export const StrategyTools = ({ userType }) => {
 	);
 };
 
-const StrategyToolsWrapper = styled.section``;
+const StrategyToolsWrapper = styled.section`
+	@media only screen and (max-width: 54.3rem) {
+		display: none;
+	}
+`;
 const StrategyToolsBody = styled.div`
 	display: flex;
 `;
@@ -97,10 +98,17 @@ const StrategyToolsBodyLeft = styled.div`
 		margin-block-start: 2rem;
 	}
 `;
-const StrategyToolsBodyRight = styled.div``;
+const StrategyToolsBodyRight = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h3 {
+		color: ${({ theme }) => theme.primary.default};
+	}
+`;
 
 const TopParagGraph = styled.div`
-	margin-top: 10rem;
+	margin-top: 2rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;

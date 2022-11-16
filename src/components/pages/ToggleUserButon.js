@@ -26,6 +26,10 @@ const SecondaryHeaderWrapper = styled.div`
 	align-items: center;
 	background-color: #cfd2fa;
 	border-radius: 99rem;
+	margin-block: 1rem;
+	@media only screen and (max-width: 54.3rem) {
+		display: none;
+	}
 `;
 
 const Toggle = styled.div`

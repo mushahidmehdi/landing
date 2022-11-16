@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Heading, SubHeading } from 'styles/shared';
+import { Heading } from 'styles/shared';
 import mobImages from 'assests/images/mob.svg';
 import marketPlace from 'assests/images/marketplace-mob.svg';
 import startegyToolImg from 'assests/images/startegy-side-tool.svg';
@@ -35,7 +35,6 @@ const MarketPlace = ({ userType }) => {
 				<>
 					<MarketPlaceHeader>
 						<Heading>Marketplace</Heading>
-						<SubHeading>You are ready?</SubHeading>
 					</MarketPlaceHeader>
 					<MarketPlaceBody>
 						<MarketPlaceBodyLeft>
@@ -64,6 +63,9 @@ export default MarketPlace;
 
 const MarketPlaceWrapper = styled.div`
 	margin-inline: -3rem;
+	@media only screen and (max-width: 54.3rem) {
+		display: none;
+	}
 `;
 
 const MarketPlaceHeader = styled.div`

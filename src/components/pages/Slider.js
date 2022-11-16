@@ -33,10 +33,10 @@ const Slider = () => {
 export default Slider;
 
 const SliderWrapper = styled.div`
+	margin-block-start: 5rem;
 	margin-block-end: 5rem;
 	display: flex;
 	align-items: flex-end;
-
 	transform: ${({ delayTwoSec }) => (delayTwoSec === 'block' ? 'translateX(0%)' : 'translateX(100%)')};
 	transition-duration: 1000ms;
 `;
@@ -46,6 +46,9 @@ const ExchnageBarBg = styled.div`
 	> img {
 		width: 214rem;
 		max-width: 100%;
+		@media only screen and (max-width: 54.3rem) {
+			background-color: ${({ theme }) => theme.primary.default};
+		}
 	}
 `;
 
@@ -55,6 +58,9 @@ const HighwaySlider = styled.div`
 	width: 100%;
 	position: absolute;
 	top: 60%;
+	@media only screen and (max-width: 54.3rem) {
+		top: 10%;
+	}
 `;
 
 const HighwayBarrier = styled.div`
@@ -79,4 +85,8 @@ const HighwayCar = styled.li`
 	align-items: center;
 	background-color: transparent;
 	animation: ${translateinfinite} 25s linear infinite;
+
+	@media only screen and (max-width: 54.3rem) {
+		flex: 0.1;
+	}
 `;

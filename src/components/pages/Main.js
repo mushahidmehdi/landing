@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Button } from 'styles/shared';
 import { Container } from 'styles/shared';
-import mainPageImg from 'assests/images/mainPage.svg';
 import bgGradient from 'assests/images/main-bg-gradient.svg';
 import AppStore from 'assests/images/app-store.svg';
 import googlePlay from 'assests/images/google-play.svg';
@@ -10,18 +8,11 @@ import bgvedio from 'assests/vedios/main-page-vedio.mp4';
 
 const Main = () => {
 	const [delayFiveMiliSec, setDelayFiveMiliSec] = useState('none');
-	const [delayTwoSec, setDelayTwoSec] = useState('none');
 
 	useEffect(() => {
 		setTimeout(function () {
 			setDelayFiveMiliSec('block');
 		}, 500);
-	}, []);
-
-	useEffect(() => {
-		setTimeout(function () {
-			setDelayTwoSec('block');
-		}, 1000);
 	}, []);
 
 	return (
@@ -55,25 +46,12 @@ const Main = () => {
 							<span>Watch Tutorials</span>
 						</h6>
 					</WatchTurorialWrapper>
-					<ActionWrapperDesktop delayTwoSec={delayTwoSec}>
-						<div>
-							<Button
-								text="Get Started"
-								sx={{
-									paddingBlock: '1rem',
-									paddingInline: '2.5rem',
-								}}
-							/>
-							<img src={AppStore} alt="App Store" />
-							<img src={googlePlay} alt="Google Play" />
-						</div>
-					</ActionWrapperDesktop>
 				</RightBody>
 				<LeftBody delayFiveMiliSec={delayFiveMiliSec}>
 					<video src={bgvedio} autoPlay loop muted />
 					<ActionWrapperMob>
-						<img src={AppStore} alt="App Store" width={150} />
-						<img src={googlePlay} alt="Google Play" width={150} />
+						<img src={AppStore} alt="App Store" width={135} />
+						<img src={googlePlay} alt="Google Play" width={135} />
 					</ActionWrapperMob>
 				</LeftBody>
 			</MainWrapper>
@@ -175,30 +153,11 @@ const RightBody = styled.div`
 	}
 `;
 
-const ActionWrapperDesktop = styled.div`
-	overflow: hidden;
-	> div {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		margin-top: 6.5rem;
-		transform: ${({ delayTwoSec }) => (delayTwoSec === 'block' ? 'translateY(0%)' : 'translateY(-300%)')};
-		transition-duration: 1000ms;
-		> img {
-			cursor: pointer;
-		}
-	}
-	@media only screen and (max-width: 54.3rem) {
-		/* display: none; */
-	}
-	display: none;
-`;
-
-const ActionWrapperMob = styled(ActionWrapperDesktop)`
+const ActionWrapperMob = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 0.4rem;
+	gap: 1rem;
 	@media only screen and (min-width: 54.3rem) {
 		display: none;
 	}
@@ -208,10 +167,8 @@ const LeftBody = styled.div`
 	display: flex;
 	max-width: 40rem;
 	overflow: hidden;
-	/* flex-direction: column; */
-	/* transform: ${({ delayFiveMiliSec }) => (delayFiveMiliSec === 'block' ? 'translateX(0%)' : 'translateX(300%)')};
-	transition-duration: 1000ms; */
-	/* border: 1px solid red; */
+	flex-direction: column;
+
 	> video {
 		display: block;
 		width: 100%;
@@ -271,9 +228,6 @@ const WatchTurorialWrapper = styled.div`
 			margin-top: 0;
 		}
 	}
-	/* @media only screen and (min-width: 54.3rem) {
-		display: none;
-	} */
 `;
 
 export default Main;

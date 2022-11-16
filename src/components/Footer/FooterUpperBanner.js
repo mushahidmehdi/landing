@@ -36,6 +36,10 @@ const FooterUpperBanner = styled.div`
 		justify-content: center;
 		align-items: center;
 	}
+
+	@media only screen and (max-width: 54.3rem) {
+		display: none;
+	}
 `;
 
 const ButtonWrapper = styled.div`
