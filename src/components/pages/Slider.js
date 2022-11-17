@@ -72,6 +72,8 @@ const HightLane = styled.ul`
 	display: flex;
 	height: 100%;
 	width: calc(180px * 24);
+	margin-inline-start: 1.5rem;
+	overflow: hidden;
 `;
 
 const translateinfinite = keyframes`

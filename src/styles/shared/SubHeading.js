@@ -14,6 +14,12 @@ const Subheading = styled.p`
 	text-align: center;
 	color: ${({ theme }) => theme.gray[100]};
 	letter-spacing: 0em;
+
+	@media only screen and (max-width: 54.3rem) {
+		font-size: 0.95rem;
+		font-weight: 500;
+		line-height: 1.2rem;
+	}
 `;
 
 export default SubHeading;

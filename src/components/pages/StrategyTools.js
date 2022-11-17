@@ -4,6 +4,7 @@ import { Button, Heading } from 'styles/shared';
 import uriIcon from 'assests/icons/uri-icon.svg';
 import titleIcon from 'assests/icons/mob-app-title-icon.svg';
 import mobApp from 'assests/images/mob-app.svg';
+import mobApp2 from 'assests/images/mobApp2.svg';
 import AppStore from 'assests/images/app-store.svg';
 import googlePlay from 'assests/images/google-play.svg';
 import strategy from 'assests/images/strategy-mp.svg';
@@ -32,76 +33,125 @@ export const StrategyTools = ({ userType }) => {
 								your strategy, backtest and run it on virtual trade to see how it performs in real-time
 								market data.
 							</p>
-							<Button
-								text="Get Start"
-								sx={{
-									marginTop: '3rem',
-									padding: '0.8rem 3rem',
-								}}
-							/>
+							<button>Get Start</button>
 						</StrategyToolsBodyLeft>
 					</StrategyToolsBody>
 				</>
 			) : (
-				<>
-					{/* <StrategyToolsHeadingWrapper>
-						<Heading>Mobile App</Heading>
-					</StrategyToolsHeadingWrapper> */}
-					<StrategyToolsBody>
-						<StrategyToolsBodyLeft>
+				<StrategyToolsBody>
+					<>
+						<StrategyToolsBodyLeftMob>
+							<img src={mobApp2} alt="Mobile App" />
+						</StrategyToolsBodyLeftMob>
+						<StrategyToolsBodyLeftDesk>
 							<img src={mobApp} alt="Mobile App" />
-						</StrategyToolsBodyLeft>
-						<StrategyToolsBodyRight>
-							<h3>Mobile App</h3>
-							<TopParagGraph>
-								<img src={titleIcon} alt="MobileIcon" />
-								<p>
-									Benefit from Traderlands’ built-in strategy creator tool that contains most of the
-									indicators available on Tradingview to create trading strategies in minutes.
-								</p>
-							</TopParagGraph>
+						</StrategyToolsBodyLeftDesk>
+					</>
+
+					<StrategyToolsBodyRight>
+						<h3>Mobile App</h3>
+						<TopParagGraph>
+							<img src={titleIcon} alt="MobileIcon" />
 							<p>
-								You can also directly connect your pre-designed Tradingview strategy to backtest. After
-								creating your strategy, backtest and run it on virtual trade to see how it performs in
-								real-time market data.
+								Benefit from Traderlands’ built-in strategy creator tool that contains most of the
+								indicators available on Tradingview to create trading strategies in minutes.
 							</p>
-							<ActionWrapperMob>
-								<img src={AppStore} alt="App Store" width={160} />
-								<img src={googlePlay} alt="Google Play" width={160} />
-							</ActionWrapperMob>
-						</StrategyToolsBodyRight>
-					</StrategyToolsBody>
-				</>
+						</TopParagGraph>
+						<p>
+							You can also directly connect your pre-designed Tradingview strategy to backtest. After
+							creating your strategy, backtest and run it on virtual trade to see how it performs in
+							real-time market data.
+						</p>
+						<ActionWrapperMob>
+							<img src={AppStore} alt="App Store" width={160} />
+							<img src={googlePlay} alt="Google Play" width={160} />
+						</ActionWrapperMob>
+					</StrategyToolsBodyRight>
+				</StrategyToolsBody>
 			)}
 		</StrategyToolsWrapper>
 	);
 };
 
-const StrategyToolsWrapper = styled.section`
-	@media only screen and (max-width: 54.3rem) {
-		display: none;
-	}
-`;
+const StrategyToolsWrapper = styled.section``;
+
 const StrategyToolsBody = styled.div`
 	display: flex;
+	@media only screen and (max-width: 54.3rem) {
+		flex-direction: column-reverse;
+	}
 `;
 const StrategyToolsHeadingWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-block: 1rem;
+	margin-block-start: 5rem;
 `;
-const StrategyToolsBodyLeft = styled.div`
-	margin-top: ${({ mt }) => mt ?? '-10rem'};
 
+const StrategyToolsBodyLeft = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	> p {
 		margin-block-start: 2rem;
 	}
+
+	> button {
+		margin-top: 2rem;
+
+		padding: 0.7rem 2rem;
+		width: 13rem;
+		border: none;
+		background-color: ${({ theme }) => theme.primary.default};
+		color: ${({ theme }) => theme.gray.fff};
+		font-family: Comfortaa;
+		font-size: 1.1rem;
+		font-weight: 700;
+		line-height: 20px;
+		border-radius: 0.5rem;
+	}
+
+	@media only screen and (max-width: 54.3rem) {
+		> button {
+			padding: 0.4rem 1rem;
+			font-size: 0.85rem;
+		}
+	}
 `;
+
+const StrategyToolsBodyLeftDesk = styled(StrategyToolsBodyLeft)`
+	margin-inline-start: -3rem;
+	@media only screen and (max-width: 54.3rem) {
+		display: none;
+	}
+`;
+const StrategyToolsBodyLeftMob = styled(StrategyToolsBodyLeft)`
+	display: none;
+	@media only screen and (max-width: 54.3rem) {
+		display: block;
+		> img {
+			width: 100%;
+			object-fit: cover;
+			height: auto;
+		}
+	}
+`;
+
 const StrategyToolsBodyRight = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	@media only screen and (max-width: 54.3rem) {
+		margin-top: 5rem;
+		> img {
+			width: 100%;
+			height: auto;
+			justify-content: cover;
+		}
+	}
 	h3 {
 		color: ${({ theme }) => theme.primary.default};
 	}
@@ -137,6 +187,9 @@ const UriTitle = styled.div`
 		margin-inline-start: 1.5rem;
 		color: ${({ theme }) => theme.primary.default};
 	}
+	@media only screen and (max-width: 54.3rem) {
+		display: none;
+	}
 `;
 
 const ActionWrapperMob = styled.div`
@@ -144,8 +197,7 @@ const ActionWrapperMob = styled.div`
 	align-items: center;
 	gap: 1rem;
 	margin-top: 2.5rem;
-	/* transform: ${({ delayTwoSec }) => (delayTwoSec === 'block' ? 'translateY(0%)' : 'translateY(-300%)')};
-	transition-duration: 1000ms; */
+
 	> img {
 		cursor: pointer;
 	}
@@ -154,9 +206,6 @@ const ActionWrapperMob = styled.div`
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 0.4rem;
-	/* @media only screen and (min-width: 54.3rem) {
-		display: none;
-	} */
 `;
 
 export default StrategyTools;

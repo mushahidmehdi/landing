@@ -63,8 +63,9 @@ export default MarketPlace;
 
 const MarketPlaceWrapper = styled.div`
 	margin-inline: -3rem;
+
 	@media only screen and (max-width: 54.3rem) {
-		display: none;
+		margin-inline: 0rem;
 	}
 `;
 
@@ -90,16 +91,31 @@ const MarketPlaceBodyLeft = styled.div`
 		line-height: 27px;
 		color: ${({ theme }) => theme.gray[100]};
 	}
+	@media only screen and (max-width: 54.3rem) {
+		margin-inline: 0;
+		> img {
+			width: 100%;
+			height: auto;
+			justify-content: cover;
+		}
+	}
 `;
 
 const MarketPlaceBodyRight = styled.div`
 	margin-top: 5rem;
+	width: 100%;
+	@media only screen and (max-width: 54.3rem) {
+		display: none;
+	}
 `;
 
 const PublishStrategy = styled.div`
 	display: flex;
 	margin-block-start: 5rem;
 	position: relative;
+	@media only screen and (max-width: 54.3rem) {
+		flex-direction: column-reverse;
+	}
 `;
 
 const PublishStrategyLeft = styled.div`
@@ -119,6 +135,21 @@ const PublishStrategyLeft = styled.div`
 		max-width: 100%;
 		margin-top: -6rem;
 	}
+
+	@media only screen and (max-width: 54.3rem) {
+		> p {
+			padding-inline: 0rem;
+		}
+	}
 `;
 
-const PublishStrategyRight = styled.div``;
+const PublishStrategyRight = styled.div`
+	@media only screen and (max-width: 54.3rem) {
+		margin-inline-end: -2rem;
+		img {
+			width: 100%;
+			height: auto;
+			justify-content: cover;
+		}
+	}
+`;

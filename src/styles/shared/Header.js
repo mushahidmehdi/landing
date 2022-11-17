@@ -13,6 +13,13 @@ const HeadingWrapper = styled.h1`
 	color: ${({ theme }) => theme.primary.default};
 	text-align: center;
 	margin-block-start: 2rem;
+	padding-inline: 1rem;
+
+	@media only screen and (max-width: 54.3rem) {
+		font-size: 1.8rem;
+		font-weight: 500;
+		line-height: 2rem;
+	}
 `;
 
 export default Heading;

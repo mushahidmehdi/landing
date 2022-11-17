@@ -18,8 +18,6 @@ const Invest = ({ setUserType, userType }) => {
 				) : (
 					<Heading>Algorithmic Trading Made Simple</Heading>
 				)}
-
-				{/* <SubHeading>Gain access and exposure to a growing list of asset classes, not just stocks.</SubHeading> */}
 				<Navigations>
 					{userType === 1
 						? algoNavigation.map(({ name, link }, idx) => (
@@ -75,7 +73,7 @@ const Invest = ({ setUserType, userType }) => {
 export default Invest;
 
 const InvestWrapper = styled.section`
-	height: 100vh;
+	/* height: 100vh; */
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -97,6 +95,11 @@ const Navigations = styled.nav`
 	justify-content: center;
 	gap: 4rem;
 	margin-block-start: 1rem;
+
+	@media only screen and (max-width: 54.3rem) {
+		gap: 1rem;
+		max-width: 400%;
+	}
 `;
 
 const NavItem = styled.a`
@@ -106,20 +109,37 @@ const NavItem = styled.a`
 	font-weight: 600;
 	line-height: 31px;
 	cursor: pointer;
+	@media only screen and (max-width: 54.3rem) {
+		line-height: 20px;
+		font-size: 0.85rem;
+		flex-wrap: wrap;
+	}
 `;
 
 const Body = styled.div`
 	display: flex;
-	gap: 4rem;
+	max-width: 100%;
+	@media only screen and (max-width: 54.3rem) {
+		flex-wrap: wrap;
+	}
 `;
 
-const LeftBody = styled.div``;
+const LeftBody = styled.div`
+	@media only screen and (max-width: 54.3rem) {
+		> img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+	}
+`;
 
 const RightBody = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
 	margin-top: 12rem;
+
 	> p {
 		color: ${({ theme }) => theme.gray[100]};
 		font-size: 1.1rem;
@@ -134,9 +154,28 @@ const RightBody = styled.div`
 		background-color: ${({ theme }) => theme.primary.default};
 		color: ${({ theme }) => theme.gray.fff};
 		font-family: Comfortaa;
-		font-size: 18px;
+		font-size: 1.1rem;
 		font-weight: 700;
 		line-height: 20px;
 		border-radius: 0.5rem;
+	}
+
+	@media only screen and (max-width: 54.3rem) {
+		margin-top: 0;
+		max-width: 100%;
+		justify-content: center;
+		align-items: center;
+		align-items: flex-start;
+		> p {
+			color: ${({ theme }) => theme.gray[100]};
+			font-size: 0.8rem;
+			font-family: Comfortaa;
+			font-weight: 500;
+			line-height: 18px;
+		}
+		> button {
+			padding: 0.4rem 1rem;
+			font-size: 0.85rem;
+		}
 	}
 `;

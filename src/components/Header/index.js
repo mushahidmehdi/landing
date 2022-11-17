@@ -84,12 +84,12 @@ const Header = () => {
 							</NavItem>
 						))}
 						<SocailMedia>
-							<img src={tyIcon} alt="youtube" width={30} />
-							<img src={cloudIcon} alt="cloud" width={30} />
-							<img src={robIcon} alt="Rob" width={30} />
-							<img src={twIcon} alt="Twitter" width={30} />
-							<img src={AppStore} alt="App Store" width={100} />
-							<img src={googlePlay} alt="Google Play" width={100} />
+							<img src={tyIcon} alt="youtube" width={27} />
+							<img src={cloudIcon} alt="cloud" width={27} />
+							<img src={robIcon} alt="Rob" width={27} />
+							<img src={twIcon} alt="Twitter" width={27} />
+							<img src={AppStore} alt="App Store" width={90} />
+							<img src={googlePlay} alt="Google Play" width={90} />
 						</SocailMedia>
 					</NavWrapper>
 					<BottomGradient>
@@ -122,7 +122,7 @@ const TabletDisplay = styled.section`
 	justify-content: space-between;
 	max-width: 100%;
 	height: 6rem;
-	padding-inline: 3rem;
+	padding-inline: 1rem;
 	align-items: center;
 	margin: 0 auto;
 
@@ -244,6 +244,8 @@ const BottomGradient = styled.div`
 
 const SocailMedia = styled.div`
 	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
 	bottom: 5%;
 	display: flex;
 	gap: 0.5rem;

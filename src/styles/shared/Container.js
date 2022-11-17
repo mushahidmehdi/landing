@@ -14,6 +14,9 @@ const ContainerWrapper = styled.div`
 	align-items: center;
 	margin: 0 auto;
 	padding-inline: 3rem;
+	@media only screen and (max-width: 54.3rem) {
+		padding-inline: 1rem;
+	}
 `;
 
 export default Container;
