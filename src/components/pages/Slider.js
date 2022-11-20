@@ -46,7 +46,7 @@ const ExchnageBarBg = styled.div`
 	> img {
 		width: 214rem;
 		max-width: 100%;
-		@media only screen and (max-width: 54.3rem) {
+		@media only screen and (max-width: 46.188rem) {
 			background-color: ${({ theme }) => theme.primary.default};
 		}
 	}
@@ -58,8 +58,13 @@ const HighwaySlider = styled.div`
 	width: 100%;
 	position: absolute;
 	top: 60%;
-	@media only screen and (max-width: 54.3rem) {
-		top: 10%;
+
+	@media only screen and (max-width: 45.188rem) {
+		top: 15%;
+	}
+
+	@media only screen and (min-width: 46.2rem) and (max-width: 86.188rem) {
+		top: 55%;
 	}
 `;
 
@@ -88,7 +93,7 @@ const HighwayCar = styled.li`
 	background-color: transparent;
 	animation: ${translateinfinite} 25s linear infinite;
 
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		flex: 0.1;
 	}
 `;

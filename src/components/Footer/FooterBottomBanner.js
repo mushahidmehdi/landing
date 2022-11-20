@@ -18,7 +18,7 @@ const FooterBottomBanner = () => {
 			<LeftFooterImage bgBluerImg={bgBluerImg}>
 				<p>Get Social Trading Updates Keep your knowledge up-to-date</p>
 				<InputWrapper>
-					<input type="text" />
+					<input type="text" placeholder="falanfilan@gmail.com" />
 					<button>Submit</button>
 				</InputWrapper>
 			</LeftFooterImage>
@@ -30,14 +30,18 @@ const FooterBottomBannerWrapper = styled.div`
 	background-color: ${({ theme }) => theme.primary.default};
 	height: 11rem;
 	display: flex;
-	@media only screen and (max-width: 54.3rem) {
-		display: none;
+	@media only screen and (max-width: 86.188rem) {
+		flex-wrap: wrap;
 	}
 `;
 
 const RightFooterImage = styled.div`
 	width: 50%;
 	display: flex;
+	@media only screen and (max-width: 86.188rem) {
+		width: 100%;
+		height: 9rem;
+	}
 `;
 
 const AnimaWrapper = styled.div`
@@ -48,6 +52,14 @@ const AnimaWrapper = styled.div`
 		position: absolute;
 		top: -30%;
 		left: 20%;
+	}
+	@media only screen and (max-width: 86.188rem) {
+		> img {
+			width: 9rem;
+			position: absolute;
+			top: -20%;
+			left: 10%;
+		}
 	}
 `;
 
@@ -63,12 +75,26 @@ const LeftFooterImage = styled.div`
 		font-size: 1.6rem;
 		font-weight: 700;
 		line-height: 28px;
-		max-width: 28rem;
+		max-width: 32rem;
+	}
+
+	@media only screen and (max-width: 86.188rem) {
+		width: 100%;
+		padding-inline: 1.5rem;
+		padding-block: 2rem;
+		background-image: url(${({ bgBluerImg }) => bgBluerImg});
+		p {
+			font-size: 0.95rem;
+			font-weight: 500;
+			line-height: 22px;
+		}
 	}
 `;
 
 const InputWrapper = styled.div`
 	margin-top: 0.8rem;
+	display: flex;
+	max-width: 100%;
 	> input {
 		height: 44px;
 		width: 402px;
@@ -76,22 +102,42 @@ const InputWrapper = styled.div`
 		outline: none;
 		border: none;
 		background-color: #9fa6f6;
-		font-size: 1.3rem;
+		font-size: 1rem;
 		font-weight: 500;
 		color: ${({ theme }) => theme.gray.fff};
-		text-indent: 1rem;
+		text-indent: 0.5rem;
+		max-width: 100%;
+		::placeholder {
+			color: #6f79f1;
+		}
+		margin-inline-end: 1rem;
 	}
 
 	> button {
 		border-radius: 8px;
-		font-size: 1rem;
-		font-weight: 700;
-		margin-inline-start: 1rem;
-		padding: 0.9rem 2rem;
+		font-size: 0.95rem;
+		font-weight: 500;
+		padding: 0.6rem 1.6rem;
 		outline: none;
 		border: none;
 		background-color: ${({ theme }) => theme.primary.default};
 		color: ${({ theme }) => theme.gray.fff};
+	}
+	@media only screen and (max-width: 86.188rem) {
+		> input {
+			height: 35px;
+			width: 402px;
+			border-radius: 8px;
+			outline: none;
+			border: none;
+			background-color: #9fa6f6;
+			font-size: 1rem;
+			font-weight: 500;
+			color: ${({ theme }) => theme.gray.fff};
+			text-indent: 0.5rem;
+			max-width: 100%;
+			margin-inline-end: 0.4rem;
+		}
 	}
 `;
 
@@ -107,6 +153,10 @@ const GetStartWrapper = styled.div`
 		font-weight: 700;
 		line-height: 28px;
 		color: ${({ theme }) => theme.gray.fff};
+		@media only screen and (max-width: 86.188rem) {
+			font-size: 1rem;
+			line-height: 19px;
+		}
 	}
 
 	> button {

@@ -15,7 +15,7 @@ const HeadingWrapper = styled.h1`
 	margin-block-start: 2rem;
 	padding-inline: 1rem;
 
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		font-size: 1.8rem;
 		font-weight: 500;
 		line-height: 2rem;

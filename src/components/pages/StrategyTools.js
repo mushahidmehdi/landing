@@ -77,7 +77,7 @@ const StrategyToolsWrapper = styled.section``;
 
 const StrategyToolsBody = styled.div`
 	display: flex;
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		flex-direction: column-reverse;
 	}
 `;
@@ -92,9 +92,6 @@ const StrategyToolsBodyLeft = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	> p {
-		margin-block-start: 2rem;
-	}
 
 	> button {
 		margin-top: 2rem;
@@ -111,7 +108,7 @@ const StrategyToolsBodyLeft = styled.div`
 		border-radius: 0.5rem;
 	}
 
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		> button {
 			padding: 0.4rem 1rem;
 			font-size: 0.85rem;
@@ -121,13 +118,13 @@ const StrategyToolsBodyLeft = styled.div`
 
 const StrategyToolsBodyLeftDesk = styled(StrategyToolsBodyLeft)`
 	margin-inline-start: -3rem;
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		display: none;
 	}
 `;
 const StrategyToolsBodyLeftMob = styled(StrategyToolsBodyLeft)`
 	display: none;
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		display: block;
 		> img {
 			width: 100%;
@@ -144,16 +141,24 @@ const StrategyToolsBodyRight = styled.div`
 	justify-content: center;
 	width: 100%;
 
-	@media only screen and (max-width: 54.3rem) {
+	h3 {
+		color: ${({ theme }) => theme.primary.default};
+	}
+
+	@media only screen and (max-width: 86.188rem) {
 		margin-top: 5rem;
 		> img {
 			width: 100%;
 			height: auto;
 			justify-content: cover;
 		}
-	}
-	h3 {
-		color: ${({ theme }) => theme.primary.default};
+
+		> p {
+			font-family: Comfortaa;
+			font-size: 0.95rem;
+			font-weight: 500;
+			line-height: 22px;
+		}
 	}
 `;
 
@@ -170,8 +175,16 @@ const TopParagGraph = styled.div`
 		padding: 1rem;
 	}
 
-	p {
+	> p {
 		margin-inline-start: 1rem;
+	}
+	@media only screen and (max-width: 86.188rem) {
+		> p {
+			font-family: Comfortaa;
+			font-size: 0.95rem;
+			font-weight: 500;
+			line-height: 22px;
+		}
 	}
 `;
 
@@ -181,13 +194,13 @@ const UriTitle = styled.div`
 
 	p {
 		font-family: Comfortaa;
-		font-size: 32px;
+		font-size: 2rem;
 		font-weight: 700;
 		line-height: 36px;
 		margin-inline-start: 1.5rem;
 		color: ${({ theme }) => theme.primary.default};
 	}
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		display: none;
 	}
 `;

@@ -112,7 +112,7 @@ const DesktopDisplay = styled.section`
 	height: 5rem;
 	padding-inline: 3rem;
 	margin: 0 auto;
-	@media only screen and (max-width: 54.31rem) {
+	@media only screen and (max-width: 86.15rem) {
 		display: none;
 	}
 `;
@@ -126,7 +126,11 @@ const TabletDisplay = styled.section`
 	align-items: center;
 	margin: 0 auto;
 
-	@media only screen and (min-width: 54.3rem) {
+	@media only screen and (min-width: 44.188rem) {
+		padding-inline: 2rem;
+	}
+
+	@media only screen and (min-width: 86.188rem) {
 		display: none;
 	}
 `;

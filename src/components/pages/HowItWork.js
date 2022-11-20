@@ -28,7 +28,7 @@ const HowWorkWrapper = styled.section`
 	align-items: center;
 	width: 100%;
 
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		margin-top: 3rem;
 	}
 `;
@@ -36,7 +36,7 @@ const HowWorkWrapper = styled.section`
 const SubHeadingWrapper = styled.div`
 	display: none;
 	margin-block: 1rem;
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		display: block;
 	}
 `;

@@ -18,6 +18,13 @@ const BottomFooter = () => {
 			<LogoWrapper>
 				<img src={nameBottomLogo} alt="Logo" />
 			</LogoWrapper>
+			<SocailMediaIconsMobile>
+				<img src={youtube} alt="youtube" />
+				<img src={twitter} alt="twitter" />
+				<img src={instagram} alt="instagram" />
+				<img src={telegram} alt="telegram" />
+				<img src={linkin} alt="linkin" />
+			</SocailMediaIconsMobile>
 			<FotterLinks>
 				{footer.map(({ name, link }) => (
 					<div>
@@ -26,25 +33,19 @@ const BottomFooter = () => {
 					</div>
 				))}
 			</FotterLinks>
-			<SocailMediaIcons>
+			<SocailMediaIconsDesktop>
 				<img src={youtube} alt="youtube" />
 				<img src={twitter} alt="twitter" />
 				<img src={instagram} alt="instagram" />
 				<img src={telegram} alt="telegram" />
 				<img src={linkin} alt="linkin" />
-			</SocailMediaIcons>
+			</SocailMediaIconsDesktop>
 
 			<Address>
 				<p>Paratica Bilişim Danışmanlık ve Finansal Hizmetler A.Ş</p>
 				<p>Kordonboyu Mah. Ankara Cad. 147/A İstmarina Konutları S1 Kule Kat:24 D:300</p>
 				<p> Kartal/İSTANBUL</p>
 			</Address>
-
-			<LanguageWrapper>
-				<p>Language</p>
-				<img src={TrFlag} alt="Tr" />
-				<img src={EnFlag} alt="En" />
-			</LanguageWrapper>
 
 			<YearWrapper>
 				<img src={year} alt="year" />
@@ -60,8 +61,8 @@ const BottomFooterWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	padding-top: 5rem;
-	@media only screen and (max-width: 54.3rem) {
-		display: none;
+	@media only screen and (max-width: 86.188rem) {
+		margin-top: 5rem;
 	}
 `;
 const LogoWrapper = styled.div``;
@@ -75,28 +76,54 @@ const FotterLinks = styled.div`
 		padding-top: 0.3rem;
 		margin-inline-start: 0.3rem;
 	}
+
+	@media only screen and (max-width: 86.188rem) {
+		flex-direction: column;
+		gap: 0.6rem;
+	}
 `;
 const Address = styled.div`
 	text-align: center;
 	> p {
 		color: ${({ theme }) => theme.gray[100]};
 	}
+	@media only screen and (max-width: 86.188rem) {
+		margin-top: 2rem;
+
+		> p {
+			font-size: 0.8rem;
+		}
+	}
 `;
 
 const FooterLink = styled.a`
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 300;
 	line-height: 0.85rem;
 	letter-spacing: 0em;
 	text-align: right;
 	color: #b5b5b5;
 	text-decoration: none;
+	@media only screen and (max-width: 86.188rem) {
+		font-size: 0.85rem;
+	}
 `;
 
 const SocailMediaIcons = styled.div`
 	display: flex;
 	gap: 2rem;
 	margin-block: 2rem;
+`;
+
+const SocailMediaIconsDesktop = styled(SocailMediaIcons)`
+	@media only screen and (max-width: 86.188rem) {
+		display: none;
+	}
+`;
+const SocailMediaIconsMobile = styled(SocailMediaIcons)`
+	@media only screen and (min-width: 86.188rem) {
+		display: none;
+	}
 `;
 
 const LanguageWrapper = styled.div`

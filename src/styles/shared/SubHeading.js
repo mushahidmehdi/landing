@@ -7,7 +7,7 @@ const SubHeading = ({ children }) => {
 
 const Subheading = styled.p`
 	font-family: Comfortaa;
-	font-size: 1.05rem;
+	font-size: 1.1rem;
 	font-weight: 500;
 	line-height: 1.2rem;
 	max-width: 32rem;
@@ -15,10 +15,10 @@ const Subheading = styled.p`
 	color: ${({ theme }) => theme.gray[100]};
 	letter-spacing: 0em;
 
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		font-size: 0.95rem;
 		font-weight: 500;
-		line-height: 1.2rem;
+		line-height: 22px;
 	}
 `;
 

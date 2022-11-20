@@ -62,11 +62,7 @@ const MarketPlace = ({ userType }) => {
 export default MarketPlace;
 
 const MarketPlaceWrapper = styled.div`
-	margin-inline: -3rem;
-
-	@media only screen and (max-width: 54.3rem) {
-		margin-inline: 0rem;
-	}
+	margin-top: -7rem;
 `;
 
 const MarketPlaceHeader = styled.div`
@@ -85,18 +81,25 @@ const MarketPlaceBodyLeft = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+
 	> p {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 		font-weight: 500;
 		line-height: 27px;
 		color: ${({ theme }) => theme.gray[100]};
 	}
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		margin-inline: 0;
 		> img {
 			width: 100%;
 			height: auto;
 			justify-content: cover;
+		}
+		> p {
+			font-size: 0.95rem;
+			font-weight: 500;
+			line-height: 22px;
+			color: ${({ theme }) => theme.gray[100]};
 		}
 	}
 `;
@@ -104,7 +107,7 @@ const MarketPlaceBodyLeft = styled.div`
 const MarketPlaceBodyRight = styled.div`
 	margin-top: 5rem;
 	width: 100%;
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		display: none;
 	}
 `;
@@ -113,7 +116,7 @@ const PublishStrategy = styled.div`
 	display: flex;
 	margin-block-start: 5rem;
 	position: relative;
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		flex-direction: column-reverse;
 	}
 `;
@@ -125,7 +128,7 @@ const PublishStrategyLeft = styled.div`
 	margin-top: 3rem;
 
 	> p {
-		font-size: 1.3rem;
+		font-size: 1.1rem;
 		font-weight: 500;
 		line-height: 27px;
 		padding-inline: 6rem;
@@ -136,15 +139,19 @@ const PublishStrategyLeft = styled.div`
 		margin-top: -6rem;
 	}
 
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
+		border: 1px solid red;
 		> p {
 			padding-inline: 0rem;
+			font-size: 0.95;
+			font-weight: 500;
+			line-height: 22px;
 		}
 	}
 `;
 
 const PublishStrategyRight = styled.div`
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		margin-inline-end: -2rem;
 		img {
 			width: 100%;

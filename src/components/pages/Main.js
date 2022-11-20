@@ -132,7 +132,7 @@ const RightBody = styled.div`
 		margin-top: 4rem;
 		overflow: hidden;
 
-		@media only screen and (max-width: 54.3rem) {
+		@media only screen and (max-width: 86.188rem) {
 			margin-top: 4rem;
 		}
 		@media only screen and (max-width: 444px) {
@@ -158,7 +158,7 @@ const ActionWrapperMob = styled.div`
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 1rem;
-	@media only screen and (min-width: 54.3rem) {
+	@media only screen and (min-width: 86.188rem) {
 		display: none;
 	}
 `;
@@ -176,7 +176,7 @@ const LeftBody = styled.div`
 		object-fit: cover;
 	}
 
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		display: flex;
 		justify-content: center;
 		width: 100%;

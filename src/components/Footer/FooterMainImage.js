@@ -33,8 +33,10 @@ export default FooterMainImage;
 
 const FooterMainImageWrapper = styled.div`
 	background-image: url(${({ bgImg }) => bgImg});
-	background-repeat: no-repeat;
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
 	color: ${({ theme }) => theme.gray.fff};
 	height: 53rem;
 	display: flex;
@@ -50,13 +52,27 @@ const FooterMainImageWrapper = styled.div`
 	}
 
 	> p {
-		font-size: 1.3rem;
+		font-size: 1.1rem;
 		font-weight: 500;
 		line-height: 27px;
 		max-width: 32rem;
 	}
 
-	@media only screen and (max-width: 54.3rem) {
-		display: none;
+	@media only screen and (max-width: 86.188rem) {
+		padding-inline: 1rem;
+		> h5 {
+			font-size: 1.5rem;
+			font-weight: 700;
+			line-height: 35px;
+			max-width: 22rem;
+			margin-block-end: 1rem;
+		}
+
+		> p {
+			font-size: 0.95rem;
+			font-weight: 500;
+			line-height: 22px;
+			max-width: 22rem;
+		}
 	}
 `;

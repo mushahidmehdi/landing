@@ -79,7 +79,7 @@ const InvestWrapper = styled.section`
 	flex-direction: column;
 	align-items: center;
 
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		/* display: none; */
 	}
 `;
@@ -96,7 +96,7 @@ const Navigations = styled.nav`
 	gap: 4rem;
 	margin-block-start: 1rem;
 
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		gap: 1rem;
 		max-width: 400%;
 	}
@@ -109,7 +109,7 @@ const NavItem = styled.a`
 	font-weight: 600;
 	line-height: 31px;
 	cursor: pointer;
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		line-height: 20px;
 		font-size: 0.85rem;
 		flex-wrap: wrap;
@@ -119,13 +119,13 @@ const NavItem = styled.a`
 const Body = styled.div`
 	display: flex;
 	max-width: 100%;
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 58rem) {
 		flex-wrap: wrap;
 	}
 `;
 
 const LeftBody = styled.div`
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		> img {
 			width: 100%;
 			height: auto;
@@ -137,8 +137,9 @@ const LeftBody = styled.div`
 const RightBody = styled.div`
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
-	margin-top: 12rem;
+	gap: 1rem;
+	margin-top: 10rem;
+	margin-inline-start: 6rem;
 
 	> p {
 		color: ${({ theme }) => theme.gray[100]};
@@ -148,6 +149,7 @@ const RightBody = styled.div`
 		line-height: 22px;
 	}
 	> button {
+		margin-top: 1rem;
 		padding: 0.7rem 2rem;
 		width: 13rem;
 		border: none;
@@ -160,15 +162,17 @@ const RightBody = styled.div`
 		border-radius: 0.5rem;
 	}
 
-	@media only screen and (max-width: 54.3rem) {
+	@media only screen and (max-width: 86.188rem) {
 		margin-top: 0;
 		max-width: 100%;
 		justify-content: center;
 		align-items: center;
 		align-items: flex-start;
+		margin-inline-start: 0rem;
+
 		> p {
 			color: ${({ theme }) => theme.gray[100]};
-			font-size: 0.8rem;
+			font-size: 0.95rem;
 			font-family: Comfortaa;
 			font-weight: 500;
 			line-height: 18px;

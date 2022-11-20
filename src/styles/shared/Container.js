@@ -14,8 +14,13 @@ const ContainerWrapper = styled.div`
 	align-items: center;
 	margin: 0 auto;
 	padding-inline: 3rem;
-	@media only screen and (max-width: 54.3rem) {
+
+	@media only screen and (max-width: 34.188rem) {
 		padding-inline: 1rem;
+	}
+
+	@media only screen and (min-width: 34.188rem) and (max-width: 86.188rem) {
+		padding-inline: 2rem;
 	}
 `;
 
