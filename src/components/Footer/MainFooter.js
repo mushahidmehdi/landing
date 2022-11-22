@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { footer } from 'configs/footer';
+import { supportLang } from 'configs/supportedLangs';
+import ChooseLan from 'utility/ChooseLan';
 import nameBottomLogo from 'assests/icons/logo-name-bottom.svg';
 import newTab from 'assests/icons/new-tab-arrow.svg';
 import youtube from 'assests/icons/yt.svg';
@@ -9,10 +11,10 @@ import instagram from 'assests/icons/insta.svg';
 import telegram from 'assests/icons/telegram.svg';
 import linkin from 'assests/icons/linkin.svg';
 import year from 'assests/icons/year.svg';
-import TrFlag from 'assests/icons/tr.svg';
-import EnFlag from 'assests/icons/en.svg';
 
 const BottomFooter = () => {
+	const [language, setToggleLan] = useState(supportLang[0]);
+
 	return (
 		<BottomFooterWrapper>
 			<LogoWrapper>
@@ -46,6 +48,10 @@ const BottomFooter = () => {
 				<p>Kordonboyu Mah. Ankara Cad. 147/A İstmarina Konutları S1 Kule Kat:24 D:300</p>
 				<p> Kartal/İSTANBUL</p>
 			</Address>
+
+			<LanguageWrapper>
+				<ChooseLan languages={supportLang} toggleLan={setToggleLan} defaultLn={language} />
+			</LanguageWrapper>
 
 			<YearWrapper>
 				<img src={year} alt="year" />
@@ -132,8 +138,6 @@ const LanguageWrapper = styled.div`
 	justify-content: center;
 	padding-block: 1.4rem;
 	align-items: center;
-	gap: 1rem;
-	color: #b5b5b5;
 `;
 
 const YearWrapper = styled.div`
