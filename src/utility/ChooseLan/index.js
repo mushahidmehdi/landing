@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import chevron from 'assests/icons/chevron.svg';
 
 const ChooseLan = ({ languages, toggleLan, defaultLn }) => {
-	const [dropdown, setDropdown] = useState(true);
+	const [dropdown, setDropdown] = useState(false);
 
 	return (
 		<OptionWrapper>
